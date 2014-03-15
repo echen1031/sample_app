@@ -27,6 +27,7 @@ Spork.prefork do
        #config.mock_with :rr
        
        #Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
+       config.include Rails.application.routes.url_helpers
        config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
        config.use_transactional_fixtures = true
